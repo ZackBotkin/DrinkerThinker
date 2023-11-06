@@ -1,8 +1,8 @@
 import argparse
 
-from tmp.src.config.config import Configs
-from tmp.src.context_manager import ContextManager
-from tmp.src.interactive.main_menu import MainMenu
+from drinker_thinker.src.config.config import Configs
+from drinker_thinker.src.context_manager import ContextManager
+from drinker_thinker.src.interactive.main_menu import MainMenu
 
 def main():
 
