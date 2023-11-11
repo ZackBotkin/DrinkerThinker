@@ -9,7 +9,8 @@ class MainMenu(InteractiveMenu):
         super().__init__(manager, path)
         self.sub_menu_modules = [
             RecordMenu(manager, self.path),
-            TotalsMenu(manager, self.path)
+            TotalsMenu(manager, self.path),
+            GraphsMenu(manager, self.path)
         ]
 
     def title(self):
@@ -71,3 +72,11 @@ class TotalsMenu(InteractiveMenu):
         results = self.manager.get_drinks()
         for result in results:
             print(result)
+
+class GraphsMenu(InteractiveMenu):
+
+    def title(self):
+        return "Graphs"
+
+    def main_loop(self):
+        self.manager.heat_graph()
